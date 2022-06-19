@@ -46,7 +46,7 @@ export const Level6 = ({ onWin }: Props) => {
     <span>
       <h1>Level 6</h1>
       <Field width={GRID_SIZE} height={GRID_SIZE} blockSize={BLOCK_SIZE}>
-        <Car x={car.x} y={car.y} blockSize={BLOCK_SIZE} />
+        <Car x={car.x} y={car.y} />
         <Goal x={goal.x} y={goal.y} blockSize={BLOCK_SIZE} />
       </Field>
       <Box sx={styles.buttonContainer}>

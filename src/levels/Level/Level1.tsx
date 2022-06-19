@@ -8,12 +8,12 @@ const BLOCK_SIZE = 30;
 
 function randomNumber(max: number) {
   return Math.floor(Math.random() * max) + 1;
-}
+} //
 
 const goal = {
   x: randomNumber(GRID_SIZE),
   y: randomNumber(GRID_SIZE),
-};
+};//
 
 interface Props {
   onWin: VoidFunction;
@@ -50,7 +50,7 @@ export const Level1 = ({ onWin }: Props) => {
     <span>
       <h1>Level 1</h1>
       <Field width={GRID_SIZE} height={GRID_SIZE} blockSize={BLOCK_SIZE}>
-        <Car x={car.x} y={car.y} blockSize={BLOCK_SIZE} />
+        <Car x={car.x} y={car.y} />
         <Goal x={goal.x} y={goal.y} blockSize={BLOCK_SIZE} />
       </Field>
     </span>

@@ -130,7 +130,7 @@ export const Level3 = ({ onWin, onInjury }: Props) => {
     <span>
       <h1>Level 3</h1>
       <Field width={GRID_SIZE} height={GRID_SIZE} blockSize={BLOCK_SIZE}>
-        <Car x={car.x} y={car.y} blockSize={BLOCK_SIZE} />
+        <Car x={car.x} y={car.y} />
         <Goal x={goal.x} y={goal.y} blockSize={BLOCK_SIZE} />
         <Hazard x={hazard.x} y={hazard.y} blockSize={BLOCK_SIZE} />
       </Field>
