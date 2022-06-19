@@ -37,7 +37,7 @@ export const Hearts = ({ current, total }: HeartProps) => {
       <Typography variant="h6">Hearts</Typography>
       <Box sx={styles.heartContainer}>
         {new Array(total).fill('').map((_, i) => {
-          if (i <= current) {
+          if (i + 1 <= current) {
             return <Box key={i} sx={styles.full} />;
           }
           return <Box key={i} sx={styles.empty} />;
