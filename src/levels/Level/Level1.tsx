@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import Car from '../components/Car';
-import { Field } from '../components/Field';
-import Goal from '../components/Goal';
+import Car from '../../components/Car';
+import { Field } from '../../components/Field';
+import Goal from '../../components/Goal';
 
 const GRID_SIZE = 10;
 const BLOCK_SIZE = 30;

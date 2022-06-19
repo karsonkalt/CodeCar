@@ -1,8 +1,8 @@
 import { Box, Button } from '@mui/material';
 import { useState } from 'react';
-import Car from '../components/Car';
-import { Field } from '../components/Field';
-import Goal from '../components/Goal';
+import Car from '../../components/Car';
+import { Field } from '../../components/Field';
+import Goal from '../../components/Goal';
 
 const GRID_SIZE = 15;
 const BLOCK_SIZE = 20;
@@ -20,24 +20,10 @@ interface Props {
   onWin: VoidFunction;
 }
 
-export const Level5 = ({ onWin }: Props) => {
+export const Level6 = ({ onWin }: Props) => {
   const styles = {
     buttonContainer: {
       marginTop: 3,
-      display: 'grid',
-      gridTemplateColumns: `repeat(4, auto)`,
-    },
-    left: {
-      gridColumn: 1,
-    },
-    up: {
-      gridColumn: 2,
-    },
-    right: {
-      gridColumn: 3,
-    },
-    down: {
-      gridColumn: 4,
     },
   };
   const [car, setCar] = useState({
@@ -58,24 +44,25 @@ export const Level5 = ({ onWin }: Props) => {
 
   return (
     <span>
-      <h1>Level 5</h1>
+      <h1>Level 6</h1>
       <Field width={GRID_SIZE} height={GRID_SIZE} blockSize={BLOCK_SIZE}>
         <Car x={car.x} y={car.y} blockSize={BLOCK_SIZE} />
         <Goal x={goal.x} y={goal.y} blockSize={BLOCK_SIZE} />
       </Field>
       <Box sx={styles.buttonContainer}>
-        <Button variant="contained"sx={styles.left} onClick={handleLeftButtonClick}>
-          Left
+        <Button variant="contained" onClick={handleLeftButtonClick}>
+          GO LEFT.
         </Button>
-        <Button variant="contained"sx={styles.up} onClick={handleUpButtonClick}>
-          UP
+        <Button variant="contained" onClick={handleUpButtonClick}>
+          GO UP.
         </Button>
-        <Button variant="contained"sx={styles.right} onClick={handleRightButtonClick}>
-          Right
+      <Button variant="contained" onClick={handleRightButtonClick}>
+          GO RIGHT.
         </Button>
-        <Button variant="contained"sx={styles.down} onClick={handleDownButtonClick}>
-          Down
+        <Button variant="contained" onClick={handleDownButtonClick}>
+          GO DOWN.
         </Button>
+
       </Box>
     </span>
   );

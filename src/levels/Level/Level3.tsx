@@ -1,15 +1,15 @@
 import { Box, Button } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
-import Car from '../components/Car';
-import { Field } from '../components/Field';
-import Goal from '../components/Goal';
+import Car from '../../components/Car';
+import { Field } from '../../components/Field';
+import Goal from '../../components/Goal';
 import {
   KeyboardArrowLeft,
   KeyboardArrowDown,
   KeyboardArrowUp,
   KeyboardArrowRight,
 } from '@mui/icons-material';
-import { Hazard } from '../components/Hazard';
+import { Hazard } from '../../components/Hazard';
 
 const GRID_SIZE = 10;
 const BLOCK_SIZE = 20;

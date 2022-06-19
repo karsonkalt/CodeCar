@@ -1,8 +1,14 @@
 import { Box, Button } from '@mui/material';
 import { useState } from 'react';
-import Car from '../components/Car';
-import { Field } from '../components/Field';
-import Goal from '../components/Goal';
+import Car from '../../components/Car';
+import { Field } from '../../components/Field';
+import Goal from '../../components/Goal';
+import {
+  KeyboardArrowLeft,
+  KeyboardArrowDown,
+  KeyboardArrowUp,
+  KeyboardArrowRight,
+} from '@mui/icons-material';
 
 const GRID_SIZE = 15;
 const BLOCK_SIZE = 20;
@@ -20,10 +26,29 @@ interface Props {
   onWin: VoidFunction;
 }
 
-export const Level6 = ({ onWin }: Props) => {
+export const Level4 = ({ onWin }: Props) => {
   const styles = {
     buttonContainer: {
       marginTop: 3,
+      display: 'grid',
+      gridTemplateColumns: `repeat(3, auto)`,
+      gridTemplateRows: `repeat(2, 20px)`,
+    },
+    left: {
+      gridRow: 2,
+      gridColumn: 1,
+    },
+    up: {
+      gridRow: 1,
+      gridColumn: 2,
+    },
+    right: {
+      gridRow: 2,
+      gridColumn: 3,
+    },
+    down: {
+      gridRow: 2,
+      gridColumn: 2,
     },
   };
   const [car, setCar] = useState({
@@ -44,25 +69,24 @@ export const Level6 = ({ onWin }: Props) => {
 
   return (
     <span>
-      <h1>Level 6</h1>
+      <h1>Level 4</h1>
       <Field width={GRID_SIZE} height={GRID_SIZE} blockSize={BLOCK_SIZE}>
         <Car x={car.x} y={car.y} blockSize={BLOCK_SIZE} />
         <Goal x={goal.x} y={goal.y} blockSize={BLOCK_SIZE} />
       </Field>
       <Box sx={styles.buttonContainer}>
-        <Button variant="contained" onClick={handleLeftButtonClick}>
-          GO LEFT.
+        <Button variant="contained"sx={styles.left} onClick={handleLeftButtonClick}>
+          Left
         </Button>
-        <Button variant="contained" onClick={handleUpButtonClick}>
-          GO UP.
+        <Button variant="contained"sx={styles.up} onClick={handleUpButtonClick}>
+          UP
         </Button>
-      <Button variant="contained" onClick={handleRightButtonClick}>
-          GO RIGHT.
+        <Button variant="contained"sx={styles.right} onClick={handleRightButtonClick}>
+          Right
         </Button>
-        <Button variant="contained" onClick={handleDownButtonClick}>
-          GO DOWN.
+        <Button variant="contained"sx={styles.down} onClick={handleDownButtonClick}>
+          Down
         </Button>
-
       </Box>
     </span>
   );

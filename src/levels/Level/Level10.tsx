@@ -1,8 +1,8 @@
 import { Alert, Box, Button, Input, TextField } from '@mui/material';
 import React, { useState } from 'react';
-import Car from '../components/Car';
-import { Field } from '../components/Field';
-import Goal from '../components/Goal';
+import Car from '../../components/Car';
+import { Field } from '../../components/Field';
+import Goal from '../../components/Goal';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 
 const GRID_SIZE = 15;
@@ -21,7 +21,7 @@ interface Props {
   onWin: VoidFunction;
 }
 
-export const Level9 = ({ onWin }: Props) => {
+export const Level10 = ({ onWin }: Props) => {
   const styles = {
     buttonContainer: {
       marginTop: 3,
@@ -95,7 +95,7 @@ export const Level9 = ({ onWin }: Props) => {
   return (
     <>
       <span>
-        <h1>Level 9</h1>
+        <h1>Level 10</h1>
         <Field width={GRID_SIZE} height={GRID_SIZE} blockSize={BLOCK_SIZE}>
           <Car x={car.x} y={car.y} blockSize={BLOCK_SIZE} />
           <Goal x={goal.x} y={goal.y} blockSize={BLOCK_SIZE} />
