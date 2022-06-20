@@ -1,4 +1,4 @@
-import { Level1 } from '../Level/Level1';
+import { Level1 } from '../NewLevel/Level1';
 import { Level2 } from '../Level/Level2';
 import { Level3 } from '../Level/Level3';
 import { Level4 } from '../Level/Level4';

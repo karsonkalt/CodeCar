@@ -5,7 +5,7 @@ interface CarProps {
   y: number;
 }
 
-const Car = ({ x, y }: CarProps) => {
+export const Car = ({ x, y }: CarProps) => {
   const styles = {
     root: {
       background: '#1976d2',

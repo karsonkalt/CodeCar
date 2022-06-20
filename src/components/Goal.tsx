@@ -8,7 +8,7 @@ interface CarProps {
   blockSize: number;
 }
 
-const Goal = ({ x, y, blockSize }: CarProps) => {
+export const Goal = ({ x, y, blockSize }: CarProps) => {
   const styles = {
     root: {
       background: 'green',
